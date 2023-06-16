@@ -1,0 +1,73 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #b8b8b8;
+}
+.main-div{
+    align-items: center;
+    margin: 30px;
+    padding: 40px;
+    background: whitesmoke;
+    border: 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: ;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+    border: none;
+    outline: none;
+}
+p{
+    margin: 55px;
+    font-size: 25px;
+}
+label{
+    margin: 15px;
+    width: 180px;
+    font-size: 24px;
+    
+}
+input{
+    margin: 10px;
+    width: 340px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* border: 1px solid;
+    border-radius: 5px;
+    margin-top: 10px;*/
+    
+.parent{
+    display: flex;
+    margin: 15px;
+}
+.child-1{
+    width: 50%;
+    max-width: 100%;
+}
+button{
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    background: #000;
+    border-radius: 10px;
+    font-size: 16px;
+}
+/*#336de9; facebook blue color*/
+a{
+    text-decoration: none;
+    color: #fff;
+  
+}
