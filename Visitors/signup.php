@@ -1,41 +1,43 @@
 <?php
-$FirstName = $_POST['FirstName'];
-$LastName = $_POST['LastName'];
-$Email = $_POST['Email'];
-$PhoneNumber = $_POST['PhoneNumber'];
-$Department = $_POST['Department'];
-$Password = $_POST['Password'];
-$ConfirmPassword = $_POST['ConfirmPassword'];
+include 'connection.php';
 
-echo $FirstName."<>".$LastName."<>".$Email."<>".$PhoneNumber."<>".$Department."<>".$Password."<>".$ConfirmPassword;
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve form data
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $department = $_POST['department'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
 
-$server = "localhost";
-$username ="root";
-$password ="";
-$dbname = "visitors' app";
+    // Perform validation
+    // Add your validation logic here
 
-$connection = mysqli_connect($server,$username,$password,$dbname);
+    // Check if passwords match
+    if ($password !== $confirmPassword) {
+        // Handle password mismatch error
+        echo "Passwords do not match!";
+        exit;
+    }
 
-if($connection){
-    echo "<br> CONNECTED SUCCESSFULLY";
+    // Insert data into the database
+    $sql = "INSERT INTO users (fname, lname, email, contact, department, password) 
+            VALUES ('$firstName', '$lastName', '$email', '$phoneNumber', '$department', '$password')";
+    
+    // Execute the query
+    if (mysqli_query($connection, $sql)) {
+        // Redirect to a welcome page or display a success message
+        header("Location: welcomepage.html");
+        exit;
+    } else {
+        // Handle database insertion error
+        echo "Error: " . mysqli_error($connection);
+        exit;
+    }
 }
-else{
-    echo "CONNECTION FAILED";
-}
-$sql = "INSERT INTO user (FirstName,LastName,Email,PhoneNumber,Department,Password,ConfirmPassword)
-VALUES ('$FirstName','$LastName','$Email','$PhoneNumber','$Department','$password','confirmpassword')";
-
-$insertData = mysqli_query($connection,$sql);
-
-if($insertData){
-    echo "<br> Inserted Successfully";
-}
-else{
-    echo "<br> Insert failed";
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,42 +50,47 @@ else{
 </head>
 <body>
     <div class="main-div">
-<h1>Sign up</h1>
-<p>Enter your details to create an account with my Visitor's app.</p><br>
+        <h1>Sign up</h1>
+        <p>Enter your details to create an account with my Visitor's app.</p><br>
 
-<div class="form">
-    <form method="POST">
-        <div class="first-div"> 
-        <div class="first-first-div">
-            <label>First Name*</label><br><input type="text"><br><br>
-        </div>    
-        <div class="first-second-div">
-            <label>Last Name*</label><br> <input type="text"><br><br>
-        </div>
-        </div>
+        <div class="form">
+            <form method="POST">
+                <div class="first-div">
+                    <div class="first-first-div">
+                        <label>First Name*</label><br>
+                        <input type="text" name="firstName"><br><br>
+                    </div>
+                    <div class="first-second-div">
+                        <label>Last Name*</label><br>
+                        <input type="text" name="lastName"><br><br>
+                    </div>
+                </div>
 
-
-        
-        <label>Email* <br><input type="email" class="email"></label><br><br>
-        <label>Phone Number* <br><input type="tel" class="number" required></label><br><br>
-        <label>Department*<br> <input type="text" class="department"></label> <br><br>
-        <div class="second">
-            <div class="second-first">
-                <label> Password*<br> <input type="password" required>
+                <label>Email<span class="bg">*</span> <br>
+                    <input type="email" name="email" class="email">
                 </label><br><br>
-            </div>
-            <div class="second-second">
-                <label> Confirm Password*<br> <input type="password" required>
+                <label>Phone Number* <br>
+                    <input type="tel" name="phoneNumber" class="number" required>
                 </label><br><br>
-            </div>
+                <label>Department*<br>
+                    <input type="text" name="department" class="department">
+                </label><br><br>
+                <div class="second">
+                    <div class="second-first">
+                        <label> Password*<br>
+                            <input type="password" name="password" required>
+                        </label><br><br>
+                    </div>
+                    <div class="second-second">
+                        <label> Confirm Password*<br>
+                            <input type="password" name="confirmPassword" required>
+                        </label><br><br>
+                    </div>
+                </div>
+
+                <button type="submit"><a href="login.php">Sign Up</a></button>
+            </form>
         </div>
-        
-       
-        <button type="submit"><a href ="welcomepage.html">SignUp</a></button>
-    </form>
-
-</div>
-
     </div>
 </body>
 </html>
