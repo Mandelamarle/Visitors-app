@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
     $fname = $_POST['fname'];
     $password = $_POST['password'];
-
+ 
     // Prepare the SQL statement with placeholders
     $sql = "SELECT * FROM users WHERE fname=? AND password=?";
     $statement = mysqli_prepare($connection, $sql);

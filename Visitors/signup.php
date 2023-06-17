@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
 
-    // Perform validation
+    // Perform validation   
     // Add your validation logic here
 
     // Check if passwords match
