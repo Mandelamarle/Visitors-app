@@ -45,7 +45,7 @@ else{
         <p> Welcome to My Visitor's app,<br> Sign
         in to Continue.</p><br><br>
 
-        <p>Don't have an account?<a href="signup.html"> Create account<br>
+        <p>Don't have an account?<a href="signup.php"> Create account<br>
         It takes less than a minute.</a></p><br><br>
 
  <form method="POST">
