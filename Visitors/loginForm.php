@@ -1,32 +1,41 @@
 <?php
-$Name = $_POST['Name'];
-$Password = $_POST['Password'];
+include 'connection.php';
 
-echo $Name."<>".$Password;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve form data
+    $fname = $_POST['fname'];
+    $password = $_POST['password'];
 
-$server = "localhost";
-$username ="root";
-$password ="";
-$dbname ="restaurant";
+    // Prepare the SQL statement with placeholders
+    $sql = "SELECT * FROM users WHERE fname=? AND password=?";
+    $statement = mysqli_prepare($connection, $sql);
+    
+    if ($statement) {
+        // Bind the parameters to the placeholders
+        mysqli_stmt_bind_param($statement, "ss", $fname, $password);
 
-$connection =mysqli_connect($server,$username,$password,$dbname);
+        // Execute the prepared statement
+        mysqli_stmt_execute($statement);
 
-if($connection){
-echo"<br> CONNECTED SUCCESSFULLY";
+        // Get the result
+        $result = mysqli_stmt_get_result($statement);
 
-}
-else{
-    echo "CONNECTION FAILED";
-}
-$sql = "INSERT INTO user (Name,Password) VALUES ('Name','Password')";
- 
-if($insertData){
-    echo "<br> Inserted Successfully";
-}
-else{
-    echo "<br> Insert failed";
+        if (mysqli_num_rows($result) > 0) {
+            // Authentication successful
+            $users = mysqli_fetch_assoc($result);
+            header("Location: view.html");
+            exit;
+        } else {
+            // Authentication failed
+            echo "Invalid name or password!";
+        }
+    } else {
+        // Error preparing the statement
+        echo "Error: " . mysqli_error($connection);
+    }
 }
 ?>
+
 
 
 
