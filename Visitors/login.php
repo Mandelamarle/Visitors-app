@@ -48,8 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="main-div">
-        <p>Welcome to My Visitor's app,<br>Sign in to Continue.</p><br><br>
-        <p>Don't have an account?<a href="signup.php"> Create account<br>It takes less than a minute.</a></p><br><br>
+        <p>Welcome to My Attendance's app,<br>Sign in to Continue.</p><br><br>
         <form method="POST">
             <label>Name<br><input type="text" name="fname"></label><br><br>
             <label>Password<br><input type="password" name="password"></label><br><br>
