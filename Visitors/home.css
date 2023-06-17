@@ -1,0 +1,227 @@
+/****DOPE COLORS****
+#00002d dark blue
+#5DA399 dim candle green
+#00f3ff light blue
+#ffb940 dim orange 
+#00acee twitter logo color ***/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images.jpeg);
+    background: #1b1b1b;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;    
+}
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    
+    color: #ffb940;
+    margin: 2em 2em 0 0;
+    transition: all .5s linear;
+    
+   
+}
+h2:hover{
+    border-bottom: 1px solid #ffb940;
+    
+}
+
+.main-div-div{
+    
+}
+
+nav .text{
+    position: relative;
+    color: #ffb940;
+}
+
+
+h1{
+    color: #fff;
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 30px 0 0 20px;
+}
+.navigation{
+ 
+}
+.nav-items{
+   list-style: none;
+
+    
+}
+.nav-lists{
+    border: 2px solid orange;
+    text-decoration: dashed;
+  
+}
+.fa-id-card{
+    color:#ffb940;
+    font-size: 58px;
+    margin: 30px 20px 0 0;
+}
+
+.text.second-text:before{
+  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#1b1b1b;
+    border-left: 2px solid #ffb940;
+    animation: animate 4s steps(12) infinite;
+
+}
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.second-first-div{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+      
+}
+.span-2{
+    color: rgb(197, 205, 200);
+    text-transform: uppercase;
+    font-family: Arial;
+    padding-bottom: 1000px;
+}
+p{
+    font-weight: 800;
+    font-size: 45px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.second-second-div{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+li{
+    padding-top: 10px;
+    margin-top: 10px;
+}    
+
+.fa-brands{
+    color: #fff;
+    font-size: 24px;  
+}
+.fa-facebook, .fa-whatsapp, .fa-instagram, .fa-linkedin, 
+.fa-twitter{
+    transition: all 1s;
+}
+.fa-facebook:hover{
+    color: #3b5998;
+}
+.fa-whatsapp:hover{
+   color: #59ce72; 
+}
+.fa-instagram:hover{
+color: rgba(218, 29, 4, 0.973); 
+}
+.fa-linkedin:hover{
+    color: #0e76a8;
+}
+.fa-twitter:hover{
+    color: #00acee;
+}
+h4{
+    color: #fff;
+    width: 100%;
+}
+.m{
+    color:#ffb940;
+}
+.third{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+button{
+    width: 150px;
+    height: 30px;
+    margin-top: 30px;
+    font-size: 17px;   
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+}
+.a{
+   font-size: 18px;
+   font-weight: 200;
+   padding: 10px;
+   margin-top: 25px;
+}
+.logic{
+    padding-top: 35px;  
+    transition: all linear;
+    font-size: 22px;
+    text-decoration: none;
+    color:#ffb940;
+  }
+.logic:hover{
+    text-decoration: underline;
+}
+.sep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.su{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*****8
+ul li{
+    display: inline;
+    justify-content: space-around;
+    align-items: center;
+}
+.first-div{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-div h2{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*********/
