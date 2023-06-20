@@ -54,43 +54,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Enter your details to create an account with my Visitor's app.</p><br>
 
         <div class="form">
-            <form method="POST">
+            <form method="POST" >
                 <div class="first-div">
                     <div class="first-first-div">
-                        <label>First Name*</label><br>
-                        <input type="text" name="firstName"><br><br>
+                        <label>First Name<span class="bg">*</span></label><br>
+                        <input type="text" name="firstName" id="username"><br><br>
                     </div>
                     <div class="first-second-div">
-                        <label>Last Name*</label><br>
+                        <label>Last Name<span class="bg">*</span></label><br>
                         <input type="text" name="lastName"><br><br>
                     </div>
                 </div>
 
                 <label>Email<span class="bg">*</span> <br>
-                    <input type="email" name="email" class="email">
+                    <input type="email" name="email" class="email" required>
                 </label><br><br>
-                <label>Phone Number* <br>
-                    <input type="tel" name="phoneNumber" class="number" required>
+                <label>Phone Number<span class="bg">*</span> <br>
+                    <input type="tel" name="phoneNumber" class="number">
                 </label><br><br>
-                <label>Department*<br>
+                <label>Department<span class="bg">*</span><br>
                     <input type="text" name="department" class="department">
                 </label><br><br>
                 <div class="second">
                     <div class="second-first">
-                        <label> Password*<br>
+                        <label> Password<span class="bg">*</span><br>
                             <input type="password" name="password" required>
                         </label><br><br>
                     </div>
                     <div class="second-second">
-                        <label> Confirm Password*<br>
+                        <label> Confirm Password<span class="bg">*</span><br>
                             <input type="password" name="confirmPassword" required>
                         </label><br><br>
                     </div>
                 </div>
 
-                <button type="submit"><a href="login.php">Sign Up</a></button>
+                <button type="submit" onclick="login()">Sign Up</button>
             </form>
+          
         </div>
     </div>
+    <div class="popup" id="popup">
+        <img src="">
+        <h2>Thank You</h2>
+        <p class="pt">Your details has been successfully submitted. Thanks!</p>
+        <button type="button">OK</button>
+    </div>
+    <script>
+        let username = document.getElementById("username");
+        function login()
+        {
+            if(login.username.value);
+            
+        }
+
+/**document.write("Hello " + username + ", how are you today");
+
+function login(loginForm){
+    if(loginForm.username.value && loginForm.password.value);
+    {
+        var username=document.getElementById("username").value;
+        document.write('<html><body><h2><center>')
+        document.write(username);
+        document.write('</center></h2></body></html>')
+    }
+    else
+    alert("please Enter Your Username & Password");
+}***/
+    </script>
+
 </body>
 </html>

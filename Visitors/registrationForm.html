@@ -11,14 +11,15 @@
     <div class="main-div">
         <p>Clients enter in required information for verification </p><br><br>
 <form method="POST">
-        <label>Name*<br><input type="text"></label><br><br>
-        <label>Email*<br><input type="email" required></label><br><br>
-        <label>Contact*<br><input type="tel" required></label><br><br>
+        <label>fName*<br><input type="text"></label><br><br>
+        <label>lName*<br><input type="text"></label><br><br>
+        <label>Registration Number*<br><input type="text" required></label><br><br>
+        <label>Contact*<br><input type="tel"></label><br><br>
         <label>Date*<br><input type="date"></label><br><br>
         
         <div class="parent">
             <div class="child-1">
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="openPopup()">Submit</button>
             </div>
             <div class="child-2">
                 <button type="reset">Clear Form</button>
@@ -27,5 +28,22 @@
 
     </form>
     </div>
+    <div class="popup" id="popup">
+        <img src="download.png">
+        <h2>Thank You</h2>
+        <p class="pt">Your details has been successfully submitted !</p>
+        <button type="button" onclick="closePopup()" class="yean">OK</button>
+    </div>
+    <script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+    </script>
 </body>
 </html>

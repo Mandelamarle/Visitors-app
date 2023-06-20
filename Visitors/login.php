@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: " . mysqli_error($connection);
     }
 }
+
 ?>
 
 <!DOCTYPE html>

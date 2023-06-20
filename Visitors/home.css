@@ -2,7 +2,7 @@
 #00002d dark blue
 #5DA399 dim candle green
 #00f3ff light blue
-#ffb940 dim orange 
+#34af6d dim orange 
 #00acee twitter logo color ***/
 
 
@@ -13,13 +13,12 @@
 }
 body{
     background-image: url(images.jpeg);
-    background: #1b1b1b;
+    background: #0d1117;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
     position: relative;    
 }
 .main-div{
@@ -29,24 +28,22 @@ body{
 }
 h2{
     
-    color: #ffb940;
+    color: #34af6d;
     margin: 2em 2em 0 0;
     transition: all .5s linear;
     
    
 }
 h2:hover{
-    border-bottom: 1px solid #ffb940;
+    border-bottom: 1px solid #34af6d;
     
 }
 
-.main-div-div{
-    
-}
+
 
 nav .text{
     position: relative;
-    color: #ffb940;
+    color: #34af6d;
 }
 
 
@@ -70,7 +67,7 @@ h1{
   
 }
 .fa-id-card{
-    color:#ffb940;
+    color:#34af6d;
     font-size: 58px;
     margin: 30px 20px 0 0;
 }
@@ -83,8 +80,8 @@ h1{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:#1b1b1b;
-    border-left: 2px solid #ffb940;
+    background-color:#0d1117;
+    border-left: 2px solid #34af6d;
     animation: animate 4s steps(12) infinite;
 
 }
@@ -164,7 +161,7 @@ h4{
     width: 100%;
 }
 .m{
-    color:#ffb940;
+    color:#34af6d;
 }
 .third{
     display: flex;
@@ -192,7 +189,7 @@ button{
     transition: all linear;
     font-size: 22px;
     text-decoration: none;
-    color:#ffb940;
+    color:#34af6d;
   }
 .logic:hover{
     text-decoration: underline;
@@ -208,7 +205,24 @@ button{
 }
 .links{
     text-decoration: none;
-    color: #ffb940;
+    color: #34af6d;
+}
+@media (max-width: 700px){
+
+    .links{
+        display: none;
+    };
+
+    .second-first-div{
+        position: absolute;
+        top: 0%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+        margin: 1px;
+    }
+    nav{
+        margin-bottom: 60em;
+    }
 }
 
 /*****8

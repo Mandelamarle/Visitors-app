@@ -8,15 +8,14 @@ body{
 }
 .main-div{
     align-items: center;
-    margin: 30px;
-    padding: 40px;
-    background: rgb(234, 253, 243);
-    width: 50%;
+    margin:0 auto;
+    padding: 30px;
+    background: whitesmoke;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     border: none;
