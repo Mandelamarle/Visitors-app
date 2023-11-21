@@ -40,7 +40,7 @@ Our project may be subject to specific licences or usage restrictions. This info
 
 For support or inquiries, users can reach out to our team through the contact information provided in the project's documentation or repository.
 
-We have a roadmap and future plans for our project, which may include additional features, enhancements, or integrations. These will be outlined in the project's roadmap document or issue tracker.
+We have a roadmap and future plans for our project, which may include additional features, enhancements, or integrations. These will be outlined in the project's roadmap document or issue tracker..
 
 
 
