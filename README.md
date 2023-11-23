@@ -1,4 +1,4 @@
-# Visitors-app.
+# Visitors-app..
 
 
 The purpose of our project is to develop an efficient and user-friendly Attendance Book app for educational institutions and organisations. The app aims to simplify attendance management, automate record-keeping, and provide valuable insights for educators and administrators.
