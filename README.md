@@ -15,7 +15,7 @@ Secure storage of attendance data and role-based access controls.
 Our project utilises technologies such as:
 
 Frontend: HTML, CSS, JavaScript
-Backend: php
+Backend: php.
 Database: MySQL, PostgreSQL
 The system requirements for running our project include:
 
